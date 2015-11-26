@@ -406,7 +406,7 @@ class Gitlab(object):
 
         request = requests.post("{0}/{1}/share".format(self.projects_url, project_id),
                                             headers=self.headers, data=data, verify=self.verify_ssl)
-        return request.status_code == 200
+        return request.status_code == 201
 
 
     def deleteproject(self, project_id):
